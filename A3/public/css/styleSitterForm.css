@@ -1,0 +1,85 @@
+.navbar-brand {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 30px;
+    background: linear-gradient(to right, #B24B7F, #D0A33F);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin-left: 30px;
+}
+
+.nav-item {
+    color: #626262;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+
+    margin-left: 100px;
+}
+
+.nav-item a {
+    text-decoration: underline;
+}
+
+.firstOne {
+    margin-left: 600px;
+}
+
+.active {
+    color: #B24B7F !important;
+}
+
+hr {
+    width: 98%;
+    margin: auto;
+}
+
+h1 {
+    font-family: 'PT Serif', serif;
+    font: 30px;
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+.row {
+    margin: 150px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.col {
+    padding-right: 100px !important;
+}
+
+button {
+    border-radius: 40px;
+    background-color: #B24B7F;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 10px 60px;
+    border: 0;
+    /* border-color: linear-gradient(to right, rgba(240, 240, 240, 1), rgba(240, 240, 240, 0.12)); */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.buttonContainer {
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    white-space: nowrap;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+}
+

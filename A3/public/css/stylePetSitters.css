@@ -1,0 +1,201 @@
+.navbar-brand {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 30px;
+    background: linear-gradient(to right, #B24B7F, #D0A33F);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin-left: 30px;
+}
+
+.nav-item {
+    color: #626262;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+
+    margin-left: 100px;
+}
+
+.nav-item a {
+    text-decoration: underline;
+}
+
+.firstOne {
+    margin-left: 600px;
+}
+
+.active {
+    color: #B24B7F !important;
+}
+
+hr {
+    width: 98%;
+    margin: auto;
+}
+
+h1 {
+    font-family: 'PT Serif', serif;
+    font: 30px;
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+.rowService {
+    margin-top: 50px;
+}
+
+.cardService {
+    background-image: linear-gradient(to bottom, rgba(178, 75, 127, 0.2), rgba(208, 168, 63, 0.2));
+    border: none;
+}
+
+.numDays {
+    margin-right: 10px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.packageName {
+    font-family: 'Rubik', sans-serif;
+    font-size: 17px;
+}
+
+.dollar {
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    font-style: bold;
+}
+
+.price {
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+}
+
+a.book {
+    text-decoration: underline;
+    color: #B24B7F;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.desc {
+    font-size: 11px;
+    color: #626262;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.walkerCard {
+    border-radius: 30px;
+    box-shadow: 0px 4px 10px 0px rgba(178, 75, 127, 0.6);
+}
+
+.walkerCard p {
+    font-family: 'Rubik', sans-serif;
+    color: #626262;
+}
+
+.walkerCard p.name {
+    font-weight: 500;
+    margin-top: 30px;
+    color: black;
+}
+
+.walkerCard img {
+    margin-top: 30px;
+}
+
+.bottomContainer {
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    white-space: nowrap;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* .gradientborder {
+    display: inline-block;
+    padding: 2px;
+    padding-top: 0px;
+
+    border-radius: 50px;
+    background: #B24B7F;
+    background: rgb(232, 29, 216);
+    background: linear-gradient(152deg, rgba(232, 29, 216, 1) 0%, rgba(0, 212, 255, 1) 100%);
+} */
+
+button {
+    border-radius: 40px;
+    background-color: #B24B7F;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 10px 60px;
+    border: 0;
+    /* border-color: linear-gradient(to right, rgba(240, 240, 240, 1), rgba(240, 240, 240, 0.12)); */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    background-color: #f8f8f8;
+    height: 200px;
+    width: 100%;
+}
+
+.footerLinks {
+    width: 50%;
+    padding: 110px;
+    padding-top: 50px;
+    float: left;
+    padding-bottom: 0px;
+}
+
+.footerLogo {
+    width: 50%;
+    float: right;
+    text-align: right;
+    padding-top: 50px;
+    padding-right: 40px;
+}
+
+.footer p.footerTitle {
+    color: #252525;
+    font-family: 'Rubik', sans-serif;
+    font-size: 10px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #252525;
+}
+
+.footer p {
+    color: #717171;
+    font-family: 'Rubik', sans-serif;
+    font-size: 10px;
+}
+
+.socials {
+    background-color: #939393;
+    border-radius: 12px;
+    width: 131px;
+    height: 33px;
+    /* float: right; */
+    display: block;
+    margin-left: 590px;
+}

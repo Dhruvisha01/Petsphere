@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitter Form</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Google fonts
+         -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap" rel="stylesheet">
+
+    <!-- CSS
+     -->
+    <link rel="stylesheet" href="/css/styleSitterForm.css">
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">PetSphere</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item firstOne">
+                        <a class="nav-link " aria-current="page" href="#">Forum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/petSitters">Find Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-disabled="true">Shopping</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-disabled="true">About Us</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <hr>
+
+    <h1>SIGN UP TO BE A PET SITTER</h1>
+
+    <% if(successMessage !="" ) { %>
+        <div class="successMessage" style="color: green;text-align: center;">
+            <p>
+                <%= successMessage%>
+            </p>
+        </div>
+        <%}else if(errorMessage !="" ) {%>
+            <div class="errorMessage" style="color: red; text-align: center;">
+                <p>
+                    <%= errorMessage%>
+                </p>
+            </div>
+            <%}%>
+                <form action="/sitterForm" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-lg-6 mb-12 col-mr-100">
+                            <div class="mb-4 px-5">
+                                <label for="name" class="form-label">Name</label>
+                                <input class="form-control" type="text" placeholder="John Doe"
+                                    aria-label="default input example" class="form-control" id="name" name="name">
+                            </div>
+
+                            <div class="mb-4 px-5">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" placeholder="johnDoe@example.com"
+                                    name="email">
+                            </div>
+
+                            <div class="mb-3 px-5">
+                                <label for="profile" class="form-label">Profile Picture</label>
+                                <input class="form-control" type="file" id="profile" name="image">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 mb-12 col-md-6">
+                            <div class="mb-3 px-5">
+                                <label for="name" class="form-label">Service Location</label>
+                                <input class="form-control" type="text" placeholder="Example: Shadyside, Pittsburgh"
+                                    aria-label="default input example" class="form-control" id="name" name="location">
+                            </div>
+
+
+                            <div class="mb-3 px-5">
+                                <p>
+                                    Select your Available Days
+                                </p>
+                                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+
+                                    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off"
+                                        name="days" value="Monday">
+                                    <label class="btn btn-outline-primary" for="btncheck1">Monday</label>
+
+                                    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off"
+                                        name="days" value="Tuesday">
+                                    <label class="btn btn-outline-primary" for="btncheck2">Tuesday</label>
+
+                                    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off"
+                                        name="days" value="Wednesday">
+                                    <label class="btn btn-outline-primary" for="btncheck3">Wednesday</label>
+
+                                    <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off"
+                                        name="days" value="Thursday">
+                                    <label class="btn btn-outline-primary" for="btncheck4">Thursday</label>
+
+                                    <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off"
+                                        name="days" value="Friday">
+                                    <label class="btn btn-outline-primary" for="btncheck5">Friday</label>
+
+                                    <input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off"
+                                        name="days" value="Saturday">
+                                    <label class="btn btn-outline-primary" for="btncheck6">Saturday</label>
+
+                                    <input type="checkbox" class="btn-check" id="btncheck7" autocomplete="off"
+                                        name="days" value="Sunday">
+                                    <label class="btn btn-outline-primary" for="btncheck7">Sunday</label>
+
+                                </div>
+                            </div>
+
+                            <div class="mb-3 px-5">
+                                <p>Indicate your daily availability</p>
+                                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                    <input type="checkbox" class="btn-check" id="btncheck10" autocomplete="off"
+                                        name="availability" value="Morning">
+                                    <label class="btn btn-outline-primary" for="btncheck10">Morning</label>
+
+                                    <input type="checkbox" class="btn-check" id="btncheck8" autocomplete="off"
+                                        name="availability" value="Afternoon">
+                                    <label class="btn btn-outline-primary" for="btncheck8">Afternoon</label>
+
+                                    <input type="checkbox" class="btn-check" id="btncheck9" autocomplete="off"
+                                        name="availability" value="Evening">
+                                    <label class="btn btn-outline-primary" for="btncheck9">Evening</label>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <div class="buttonContainer">
+                        <div class="centered">
+                            <button type="submit">Submit</button>
+                        </div>
+
+                    </div>
+
+                </form>
+
+</body>
+
+</html>
