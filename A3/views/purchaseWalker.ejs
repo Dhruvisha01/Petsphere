@@ -1,381 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>purchaseSitter</title>
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/stylePurchaseSitter.css">
+    <link rel="stylesheet" href="/css/stylePurchaseSitter.css" />
 
     <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Datepicker -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+    />
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
     <!-- Date range picker by andrew -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-</head>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+  </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-body">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">PetSphere</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item firstOne">
-                        <a class="nav-link " aria-current="page" href="#">Forum</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Find Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-disabled="true">Shopping</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-disabled="true">About Us</a>
-                    </li>
-                </ul>
-
-            </div>
+  <body>
+    <header class="flex justify-between items-center p-4 bg-white shadow-md">
+      <a href="http://localhost:3000">
+        <div class="logo">
+          <img src="/images/logo.png" alt="" />
         </div>
-    </nav>
-    <hr>
+      </a>
+      <nav class="flex gap-2">
+        <!-- Navigation Links -->
+        <a
+          href="http://localhost/petsphere2/index.php"
+          class="text-gray-600 hover:text-gray-900"
+          >Forum</a
+        >
+        <a href="/service" class="text-gray-600 hover:text-gray-900">Service</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900">Shop</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900">About</a>
+      </nav>
+    </header>
+    <hr />
     <h1>GENERAL INFORMATION</h1>
 
     <% if (successMessage!="" ) { %>
-        <div style="color: green; text-align: center;">
-            <%= successMessage %>
+    <div style="color: green; text-align: center"><%= successMessage %></div>
+    <% } else if(errorMessage!="" ){%>
+    <div style="color: red; text-align: center"><%= errorMessage %></div>
+    <% }%>
+    <form action="/purchasedWalker" method="post" enctype="multipart/form-data">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="mb-4 px-5">
+            <label for="name" class="form-label title">Name</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="John Doe"
+              aria-label="default input example"
+              class="form-control"
+              id="name"
+              name="name"
+            />
+          </div>
+          <div class="mb-4 px-5">
+            <label for="location" class="form-label title">Location</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Shadyside, Pittsburgh"
+              aria-label="default input example"
+              class="form-control"
+              id="location"
+              name="location"
+            />
+          </div>
         </div>
-        <% } else if(errorMessage!="" ){%>
-            <div style="color: red; text-align: center;">
-                <%= errorMessage %>
+        <div class="col-lg-6">
+          <div class="mb-4 px-5">
+            <label for="email" class="form-label title">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="johnDoe@example.com"
+              name="email"
+            />
+          </div>
+        </div>
+      </div>
+
+      <h1>YOUR PET'S PROFILE</h1>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="mb-4 px-5">
+            <label for="numPets" class="form-label title"
+              >Number of Pets:</label
+            >
+            <input
+              type="number"
+              id="numPets"
+              name="numPets"
+              min="0"
+              oninput="generatePetFields(this.value)"
+              class="form-control"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="petFieldsContainer"></div>
+
+      <h1>CHOOSE YOUR SERVICE</h1>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="form-group px-5 mb-4">
+            <label for="dateRange" class="form-label title">
+              Preferred Service Date:
+            </label>
+            <br />
+
+            <input
+              class="date-selector"
+              type="text"
+              name="datefilter"
+              value=""
+            />
+          </div>
+          <div class="mb-4 px-5">
+            <p class="title">Select your Preference:</p>
+            <span>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Morning"
+                  id="flexCheckDefault"
+                  name="availability"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Morning
+                </label>
+              </div>
+            </span>
+            <span>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Afternoon"
+                  id="flexCheckDefault"
+                  name="availability"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Afternoon
+                </label>
+              </div>
+            </span>
+            <span>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Evening"
+                  id="flexCheckDefault"
+                  name="availability"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Evening
+                </label>
+              </div>
+            </span>
+          </div>
+
+          <div class="mb-4 px-5">
+            <p class="title">Choose a walking plan:</p>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="plan"
+                id="exampleRadios1"
+                value="1 Day"
+                checked
+              />
+              <label class="form-check-label" for="exampleRadios1">
+                1 Day Discovery
+              </label>
             </div>
-            <% }%>
-                <form action="/purchasedWalker" method="post" enctype="multipart/form-data">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="mb-4 px-5">
-                                <label for="name" class="form-label title">Name</label>
-                                <input class="form-control" type="text" placeholder="John Doe"
-                                    aria-label="default input example" class="form-control" id="name" name="name">
-                            </div>
-                            <div class="mb-4 px-5">
-                                <label for="location" class="form-label title">Location</label>
-                                <input class="form-control" type="text" placeholder="Shadyside, Pittsburgh"
-                                    aria-label="default input example" class="form-control" id="location"
-                                    name="location">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="mb-4 px-5">
-                                <label for="email" class="form-label title">Email address</label>
-                                <input type="email" class="form-control" id="email" placeholder="johnDoe@example.com"
-                                    name="email">
-                            </div>
-                        </div>
-                    </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="plan"
+                id="exampleRadios2"
+                value="7 Days"
+              />
+              <label class="form-check-label" for="exampleRadios2">
+                7 Days Package
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="plan"
+                id="exampleRadios3"
+                value="14 Days"
+              />
+              <label class="form-check-label" for="exampleRadios3">
+                14 Days Package
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="plan"
+                id="exampleRadios3"
+                value="custom"
+              />
+              <label class="form-check-label" for="exampleRadios3">
+                Custom
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="mb-4 px-5">
+            <p class="title">Select your preferred pet walker(s) :</p>
 
-                    <h1>Your Pet's Profile</h1>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="mb-4 px-5">
-                                <label for="numPets" class="form-label title">Number of Pets:</label>
-                                <input type="number" id="numPets" name="numPets" min="0"
-                                    oninput="generatePetFields(this.value)" class="form-control">
-                            </div>
-                        </div>
-                    </div>
+            <div class="form-check mb-4 px-5">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Laura Maynard"
+                id="defaultCheck1"
+                name="preferredSitter"
+              />
+              <label class="form-check-label" for="defaultCheck1">
+                Laura Maynard
+              </label>
+            </div>
+            <div class="form-check mb-4 px-5">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Audrey"
+                id="defaultCheck2"
+                name="preferredSitter"
+              />
+              <label class="form-check-label" for="defaultCheck2">
+                Audrey
+              </label>
+            </div>
+            <div class="form-check mb-4 px-5">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Eleanor"
+                id="defaultCheck3"
+                name="preferredSitter"
+              />
+              <label class="form-check-label" for="defaultCheck3">
+                Eleanor
+              </label>
+            </div>
+            <div class="form-check mb-4 px-5">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Laura Maynard"
+                id="defaultCheck4"
+                name="preferredSitter"
+              />
+              <label class="form-check-label" for="defaultCheck4">
+                Laura Maynard
+              </label>
+            </div>
+            <div class="form-check mb-4 px-5">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Audrey"
+                id="defaultCheck5"
+                name="preferredSitter"
+              />
+              <label class="form-check-label" for="defaultCheck5">
+                Audrey
+              </label>
+            </div>
+            <div class="form-check mb-4 px-5">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Eleanor"
+                id="defaultCheck6"
+                name="preferredSitter"
+              />
+              <label class="form-check-label" for="defaultCheck6">
+                Eleanor
+              </label>
+            </div>
+            <div class="form-check mb-4 px-5">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Others"
+                id="defaultCheck7"
+                name="preferredSitter"
+              />
+              <label class="form-check-label" for="defaultCheck7">
+                Others
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="mb-4 px-5">
+          <p>
+            Note: We strive to accommodate your preferences and will do our best
+            to match you with the selected pet walker. However, please note that
+            this is subject to the walker’s availability. We appreciate your
+            understanding.
+          </p>
+        </div>
+      </div>
 
-                    <div id="petFieldsContainer"></div>
+      <div class="buttonContainer">
+        <div class="centered">
+          <button class="submit-btn" type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+    <!-- Footer -->
+    <footer class="footer-container">
+      <div class="footer-section">
+        <h4>FORUM</h4>
+        <a href="http://localhost/petsphere2/login.php">Log in</a>
+        <a href="http://localhost/petsphere2/index.php">Pet Forum</a>
+      </div>
+      <div class="footer-section">
+        <h4>FIND SERVICE</h4>
+        <a href="#">Provide Service</a>
+        <a href="#">Find Provider</a>
+      </div>
+      <div class="footer-section">
+        <h4>SHOPPING</h4>
+        <a href="#">Food/Snacks</a>
+        <a href="#">Toys</a>
+      </div>
+      <div class="footer-section">
+        <h4>ABOUT US</h4>
+        <a href="#">FAQ</a>
+        <a href="#">Help/Support</a>
+      </div>
 
-                    <h1>Choose your Service</h1>
+      <div class="footer-section social-media">
+        <div class="footer-section logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <!-- Social Media -->
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+      </div>
+    </footer>
+    <script>
+      $(function () {
+        $('input[name="datefilter"]').daterangepicker({
+          autoUpdateInput: false,
+          locale: {
+            cancelLabel: "Clear",
+          },
+        });
 
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="form-group px-5 mb-4">
-                                <label for="dateRange" class="form-label title"> Preferred Service Day(s): </label>
-                                <input type="text" name="datefilter" value="" />
-                            </div>
-                            <div class="mb-4 px-5">
-                                <p class="title">
-                                    Select your Preference -
-                                </p>
-                                <span>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" value="Morning"
-                                            id="flexCheckDefault" name="availability">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                            Morning
-                                        </label>
-                                    </div>
-                                </span>
-                                <span>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" value="Afternoon"
-                                            id="flexCheckDefault" name="availability">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                            Afternoon
-                                        </label>
-                                    </div>
-                                </span>
-                                <span>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" value="Evening"
-                                            id="flexCheckDefault" name="availability">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                            Evening
-                                        </label>
-                                    </div>
-                                </span>
-                            </div>
+        $('input[name="datefilter"]').on(
+          "apply.daterangepicker",
+          function (ev, picker) {
+            $(this).val(
+              picker.startDate.format("MM/DD/YYYY") +
+                " - " +
+                picker.endDate.format("MM/DD/YYYY")
+            );
+            var startDate = picker.startDate;
+            var endDate = picker.endDate;
 
-                            <div class="mb-4 px-5">
-                                <p class="title">
-                                    Choose a walking plan
-                                </p>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="plan" id="exampleRadios1"
-                                        value="1 Day" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
-                                        1 Day Discovery
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="plan" id="exampleRadios2"
-                                        value="7 Days">
-                                    <label class="form-check-label" for="exampleRadios2">
-                                        7 Days Package
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="plan" id="exampleRadios3"
-                                        value="14 Days">
-                                    <label class="form-check-label" for="exampleRadios3">
-                                        14 Days Package
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="plan" id="exampleRadios3"
-                                        value="custom">
-                                    <label class="form-check-label" for="exampleRadios3">
-                                        Custom
-                                    </label>
-                                </div>
-                            </div>
+            var numDays = endDate.diff(startDate, "days") + 1;
+            if (numDays == 1) {
+              $('input[name="plan"]')
+                .filter('[value="1 Day"]')
+                .prop("checked", true);
+            } else if (numDays == 7) {
+              $('input[name="plan"]')
+                .filter('[value="7 Days"]')
+                .prop("checked", true);
+            } else if (numDays == 14) {
+              $('input[name="plan"]')
+                .filter('[value="14 Days"]')
+                .prop("checked", true);
+            } else {
+              $('input[name="plan"]')
+                .filter('[value="custom"]')
+                .prop("checked", true);
+            }
+          }
+        );
 
+        $('input[name="datefilter"]').on(
+          "cancel.daterangepicker",
+          function (ev, picker) {
+            $(this).val("");
+          }
+        );
+      });
 
-                        </div>
-                        <div class="col-lg-6 ">
+      function generatePetFields(numPets) {
+        var container = document.getElementById("petFieldsContainer");
+        container.innerHTML = ""; // Clear previous fields
 
-                            <div class="mb-4 px-5">
-                                <p class="title">Select your preferred pet walker(s) :</p>
-
-                                <div class="form-check mb-4 px-5">
-                                    <input class="form-check-input" type="checkbox" value="Laura Maynard"
-                                        id="defaultCheck1" name="preferredSitter">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Laura Maynard
-                                    </label>
-                                </div>
-                                <div class="form-check mb-4 px-5">
-                                    <input class="form-check-input" type="checkbox" value="Audrey" id="defaultCheck2"
-                                        name="preferredSitter">
-                                    <label class="form-check-label" for="defaultCheck2">
-                                        Audrey
-                                    </label>
-                                </div>
-                                <div class="form-check mb-4 px-5">
-                                    <input class="form-check-input" type="checkbox" value="Eleanor" id="defaultCheck3"
-                                        name="preferredSitter">
-                                    <label class="form-check-label" for="defaultCheck3">
-                                        Eleanor
-                                    </label>
-                                </div>
-                                <div class="form-check mb-4 px-5">
-                                    <input class="form-check-input" type="checkbox" value="Laura Maynard"
-                                        id="defaultCheck4" name="preferredSitter">
-                                    <label class="form-check-label" for="defaultCheck4">
-                                        Laura Maynard
-                                    </label>
-                                </div>
-                                <div class="form-check mb-4 px-5">
-                                    <input class="form-check-input" type="checkbox" value="Audrey" id="defaultCheck5"
-                                        name="preferredSitter">
-                                    <label class="form-check-label" for="defaultCheck5">
-                                        Audrey
-                                    </label>
-                                </div>
-                                <div class="form-check mb-4 px-5">
-                                    <input class="form-check-input" type="checkbox" value="Eleanor" id="defaultCheck6"
-                                        name="preferredSitter">
-                                    <label class="form-check-label" for="defaultCheck6">
-                                        Eleanor
-                                    </label>
-                                </div>
-                                <div class="form-check mb-4 px-5">
-                                    <input class="form-check-input" type="checkbox" value="Others" id="defaultCheck7"
-                                        name="preferredSitter">
-                                    <label class="form-check-label" for="defaultCheck7">
-                                        Others
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="mb-4 px-5">
-                                <p>
-                                    Note: We strive to accommodate your preferences and will do our best to match you
-                                    with the
-                                    selected pet walker. However, please note that this is subject to the walker’s
-                                    availability. We
-                                    appreciate your understanding.
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-                    <div class="buttonContainer">
-                        <div class="centered">
-                            <button type="submit">Submit</button>
-                        </div>
-                    </div>
-                </form>
-                <div class="footer">
-                    <div class="footerLinks">
-                        <div class="row">
-                            <div class="col">
-                                <p class="footerTitle"><a href="#">FORUM</a></p>
-                            </div>
-                            <div class="col">
-                                <p class="footerTitle"><a href="#">FIND SERVICE</a></p>
-                            </div>
-                            <div class="col">
-                                <p class="footerTitle"><a href="#">SHOPPING</a></p>
-                            </div>
-                            <div class="col">
-                                <p class="footerTitle"><a href="#">ABOUT US</a></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <p class=""><a href="#">Log in</a></p>
-                            </div>
-                            <div class="col">
-                                <p class=""><a href="#">Provide Service</a></p>
-                            </div>
-                            <div class="col">
-                                <p class=""><a href="#">Food/Snacks</a></p>
-                            </div>
-                            <div class="col">
-                                <p class=""><a href="#">FAQ</a></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <p class=""><a href="#">Pet Forum</a></p>
-                            </div>
-                            <div class="col">
-                                <p class=""><a href="#">Find Provider</a></p>
-                            </div>
-                            <div class="col">
-                                <p class=""><a href="#">Toys</a></p>
-                            </div>
-                            <div class="col">
-                                <p class=""><a href="#">Help/Support</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footerLogo">
-                        <a class="navbar-brand" href="#">PetSphere</a>
-                        <div class="socials">
-                            <img src="/images/Rectangle23.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <script>
-
-                    $(function () {
-
-                        $('input[name="datefilter"]').daterangepicker({
-                            autoUpdateInput: false,
-                            locale: {
-                                cancelLabel: 'Clear'
-                            }
-                        });
-
-                        $('input[name="datefilter"]').on('apply.daterangepicker', function (ev, picker) {
-                            $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
-                            var startDate = picker.startDate;
-                            var endDate = picker.endDate;
-
-                            var numDays = endDate.diff(startDate, 'days') + 1
-                            if (numDays == 1) {
-                                $('input[name="plan"]').filter('[value="1 Day"]').prop('checked', true);
-                            }
-                            else if (numDays == 7) {
-                                $('input[name="plan"]').filter('[value="7 Days"]').prop('checked', true);
-                            }
-                            else if (numDays == 14) {
-                                $('input[name="plan"]').filter('[value="14 Days"]').prop('checked', true);
-                            }
-                            else {
-                                $('input[name="plan"]').filter('[value="custom"]').prop('checked', true);
-                            }
-
-
-                        });
-
-
-                        $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
-                            $(this).val('');
-                        });
-
-                    });
-
-
-
-                    function generatePetFields(numPets) {
-                        var container = document.getElementById("petFieldsContainer");
-                        container.innerHTML = ""; // Clear previous fields
-
-                        if (numPets >= 4) {
-
-                            var messageDiv = document.createElement("div");
-                            messageDiv.className = "pet-container";
-                            messageDiv.innerHTML = `
+        if (numPets >= 4) {
+          var messageDiv = document.createElement("div");
+          messageDiv.className = "pet-container";
+          messageDiv.innerHTML = `
                                     <div class="row">
                                         <div class="mb-4 px-5">
                                             <p>Please describe your condition in as much detail as possible in instructions, and we will get back to you.</p>
@@ -386,64 +483,92 @@
                                     </div>
                                     
                                 `;
-                            container.appendChild(messageDiv);
+          container.appendChild(messageDiv);
+        } else {
+          for (var i = 0; i < numPets; i++) {
+            var div = document.createElement("div");
+            div.classList.add("pet-container", "row");
 
-                        } else {
-                            for (var i = 0; i < numPets; i++) {
-                                var div = document.createElement("div");
-                                div.classList.add("pet-container", "row");
-
-                                div.innerHTML = `
+            div.innerHTML = `
                                 <div class="col-lg-6">
                                     <div class="mb-4 px-5">
-                                        <label for="typeP${i + 1}" class="form-label title">Type of Pet ${i + 1}</label>
+                                        <label for="typeP${
+                                          i + 1
+                                        }" class="form-label title">Type of Pet ${
+              i + 1
+            }</label>
                                         <input class="form-control" type="text" placeholder="Ex: Name"
-                                            aria-label="default input example" class="form-control" id="typeP${i + 1}" name="typeP${i + 1}">
+                                            aria-label="default input example" class="form-control" id="typeP${
+                                              i + 1
+                                            }" name="typeP${i + 1}">
                                     </div>
                                     <div class="mb-4 px-5">
-                                        <label for="petsName${i + 1}" class="form-label title">Name of Pet ${i + 1}</label>
+                                        <label for="petsName${
+                                          i + 1
+                                        }" class="form-label title">Name of Pet ${
+              i + 1
+            }</label>
                                         <input class="form-control" type="text" placeholder="Example: Moose and Snow"
-                                            aria-label="default input example" class="form-control" id="petsName${i + 1}"
+                                            aria-label="default input example" class="form-control" id="petsName${
+                                              i + 1
+                                            }"
                                             name="petsName${i + 1}">
                                     </div>
                                     <div class="mb-4 px-5">
-                                        <label for="breed${i + 1}" class="form-label title">Breed of Pet ${i + 1}</label>
+                                        <label for="breed${
+                                          i + 1
+                                        }" class="form-label title">Breed of Pet ${
+              i + 1
+            }</label>
                                         <input class="form-control" type="text" placeholder="Specify the breed if applicable"
-                                        aria-label="default input example" class="form-control" id="breed${i + 1}" name="breed${i + 1}">
+                                        aria-label="default input example" class="form-control" id="breed${
+                                          i + 1
+                                        }" name="breed${i + 1}">
                                     </div>
                                     <div class="mb-4 px-5">
-                                        <label for="petsAge${i + 1}" class="form-label title">Pet ${i + 1} 's age</label>
+                                        <label for="petsAge${
+                                          i + 1
+                                        }" class="form-label title">Pet ${
+              i + 1
+            } 's age</label>
                                         <input class="form-control" type="text" placeholder="Enter your pet's age"
-                                        aria-label="default input example" id="petsAge${i + 1}" name="petsAge${i + 1}">
+                                        aria-label="default input example" id="petsAge${
+                                          i + 1
+                                        }" name="petsAge${i + 1}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="mb-4 px-5">
-                                        <label for="floatingTextarea${i + 1}" class="mb-2 title">Special care instructions for Pet ${i + 1}</label>
+                                        <label for="floatingTextarea${
+                                          i + 1
+                                        }" class="mb-2 title">Special care instructions for Pet ${
+              i + 1
+            }</label>
                                         <textarea class="form-control"
                                             placeholder="Let us know if there is any special instructions or care details"
-                                            id="floatingTextarea${i + 1}" name="instructions${i + 1}"></textarea>
+                                            id="floatingTextarea${
+                                              i + 1
+                                            }" name="instructions${
+              i + 1
+            }"></textarea>
 
                                     </div>
 
                                     <div class="mb-3 px-5">
-                                        <label for="profile${i + 1}" class="form-label title">Pet's photo</label>
-                                        <input class="form-control" type="file" id="profile${i + 1}" name="images">
+                                        <label for="profile${
+                                          i + 1
+                                        }" class="form-label title">Pet's photo</label>
+                                        <input class="form-control" type="file" id="profile${
+                                          i + 1
+                                        }" name="images">
                                     </div>
                                 </div>
                             `;
 
-                                container.appendChild(div);
-                            }
-                        }
-
-
-
-
-                    }
-
-
-                </script>
-</body>
-
+            container.appendChild(div);
+          }
+        }
+      }
+    </script>
+  </body>
 </html>

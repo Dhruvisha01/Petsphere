@@ -1,175 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sitter Form</title>
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
 
     <!-- Google fonts
          -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- CSS
      -->
-    <link rel="stylesheet" href="/css/styleSitterForm.css">
+    <link rel="stylesheet" href="/css/styleSitterForm.css" />
 
     <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-body">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">PetSphere</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item firstOne">
-                        <a class="nav-link " aria-current="page" href="#">Forum</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/petSitters">Find Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-disabled="true">Shopping</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-disabled="true">About Us</a>
-                    </li>
-                </ul>
-
-            </div>
+  <body>
+    <!-- Header -->
+    <header class="flex justify-between items-center p-4 bg-white shadow-md">
+      <a href="http://localhost:3000">
+        <div class="logo">
+          <img src="/images/logo.png" alt="" />
         </div>
-    </nav>
+      </a>
+      <nav class="flex gap-2">
+        <!-- Navigation Links -->
+        <a
+          href="http://localhost/petsphere2/index.php"
+          class="text-gray-600 hover:text-gray-900"
+          >Forum</a
+        >
+        <a href="/service" class="text-gray-600 hover:text-gray-900">Service</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900">Shop</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900">About</a>
+      </nav>
+    </header>
 
-    <hr>
+    <hr />
 
     <h1>SIGN UP TO BE A PET WALKER</h1>
 
     <% if (successMessage!="") { %>
-        <div style="color: green; text-align: center;">
-            <%= successMessage %>
+    <div style="color: green; text-align: center"><%= successMessage %></div>
+    <% } else if(errorMessage!=""){%>
+    <div style="color: red; text-align: center"><%= errorMessage %></div>
+    <% }%>
+
+    <form action="/walkerForm" method="post" enctype="multipart/form-data">
+      <div class="row">
+        <div class="col-lg-6 mb-12 col-mr-100">
+          <div class="mb-4 px-5">
+            <label for="name" class="form-label">Name</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="John Doe"
+              aria-label="default input example"
+              class="form-control"
+              id="name"
+              name="name"
+            />
+          </div>
+
+          <div class="mb-4 px-5">
+            <label for="email" class="form-label">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="johnDoe@example.com"
+              name="email"
+            />
+          </div>
+
+          <div class="mb-3 px-5">
+            <label for="profile" class="form-label">Profile Picture</label>
+            <input class="form-control" type="file" id="profile" name="image" />
+          </div>
         </div>
-        <% } else if(errorMessage!=""){%>
-            <div style="color: red; text-align: center;">
-                <%= errorMessage %>
+
+        <div class="col-lg-6 mb-12 col-md-6">
+          <div class="mb-3 px-5">
+            <label for="location" class="form-label">Service Location</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Example: Shadyside, Pittsburgh"
+              aria-label="default input example"
+              class="form-control"
+              id="location"
+              name="location"
+            />
+          </div>
+
+          <div class="mb-3 px-5">
+            <p>Select your Available Days</p>
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Basic checkbox toggle button group"
+            >
+              <input
+                type="checkbox"
+                class="btn-check"
+                id="btncheck1"
+                autocomplete="off"
+                name="days"
+                value="Monday"
+              />
+              <label class="btn btn-outline-primary" for="btncheck1"
+                >Monday</label
+              >
+
+              <input
+                type="checkbox"
+                class="btn-check"
+                id="btncheck2"
+                autocomplete="off"
+                name="days"
+                value="Tuesday"
+              />
+              <label class="btn btn-outline-primary" for="btncheck2"
+                >Tuesday</label
+              >
+
+              <input
+                type="checkbox"
+                class="btn-check"
+                id="btncheck3"
+                autocomplete="off"
+                name="days"
+                value="Wednesday"
+              />
+              <label class="btn btn-outline-primary" for="btncheck3"
+                >Wednesday</label
+              >
+
+              <input
+                type="checkbox"
+                class="btn-check"
+                id="btncheck4"
+                autocomplete="off"
+                name="days"
+                value="Thursday"
+              />
+              <label class="btn btn-outline-primary" for="btncheck4"
+                >Thursday</label
+              >
+
+              <input
+                type="checkbox"
+                class="btn-check"
+                id="btncheck5"
+                autocomplete="off"
+                name="days"
+                value="Friday"
+              />
+              <label class="btn btn-outline-primary" for="btncheck5"
+                >Friday</label
+              >
+
+              <input
+                type="checkbox"
+                class="btn-check"
+                id="btncheck6"
+                autocomplete="off"
+                name="days"
+                value="Saturday"
+              />
+              <label class="btn btn-outline-primary" for="btncheck6"
+                >Saturday</label
+              >
+
+              <input
+                type="checkbox"
+                class="btn-check"
+                id="btncheck7"
+                autocomplete="off"
+                name="days"
+                value="Sunday"
+              />
+              <label class="btn btn-outline-primary" for="btncheck7"
+                >Sunday</label
+              >
             </div>
-            <% }%>
+          </div>
 
-                <form action="/walkerForm" method="post" enctype="multipart/form-data">
-                    <div class="row">
-                        <div class="col-lg-6 mb-12 col-mr-100">
-                            <div class="mb-4 px-5">
-                                <label for="name" class="form-label">Name</label>
-                                <input class="form-control" type="text" placeholder="John Doe"
-                                    aria-label="default input example" class="form-control" id="name" name="name">
-                            </div>
+          <div class="mb-3 px-5">
+            <p>Indicate your daily availability</p>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="availability"
+                id="inlineRadio1"
+                value="Morning"
+              />
+              <label class="form-check-label" for="inlineRadio1">Morning</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="availability"
+                id="inlineRadio2"
+                value="Afternoon"
+              />
+              <label class="form-check-label" for="inlineRadio2"
+                >Afternoon</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="availability"
+                id="inlineRadio3"
+                value="Evening"
+              />
+              <label class="form-check-label" for="inlineRadio3">Evening</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buttonContainer">
+        <div class="centered">
+          <a href="" class="gradientborder"
+            ><button type="submit">Submit</button></a
+          >
+        </div>
+      </div>
+    </form>
+    <!-- Footer -->
+    <footer class="footer-container">
+      <div class="footer-section">
+        <h4>FORUM</h4>
+        <a href="http://localhost/petsphere2/login.php">Log in</a>
+        <a href="http://localhost/petsphere2/index.php">Pet Forum</a>
+      </div>
+      <div class="footer-section">
+        <h4>FIND SERVICE</h4>
+        <a href="#">Provide Service</a>
+        <a href="#">Find Provider</a>
+      </div>
+      <div class="footer-section">
+        <h4>SHOPPING</h4>
+        <a href="#">Food/Snacks</a>
+        <a href="#">Toys</a>
+      </div>
+      <div class="footer-section">
+        <h4>ABOUT US</h4>
+        <a href="#">FAQ</a>
+        <a href="#">Help/Support</a>
+      </div>
 
-                            <div class="mb-4 px-5">
-                                <label for="email" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="email" placeholder="johnDoe@example.com"
-                                    name="email">
-                            </div>
-
-                            <div class="mb-3 px-5">
-                                <label for="profile" class="form-label">Profile Picture</label>
-                                <input class="form-control" type="file" id="profile" name="image">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mb-12 col-md-6">
-                            <div class="mb-3 px-5">
-                                <label for="location" class="form-label">Service Location</label>
-                                <input class="form-control" type="text" placeholder="Example: Shadyside, Pittsburgh"
-                                    aria-label="default input example" class="form-control" id="location"
-                                    name="location">
-                            </div>
-
-
-                            <div class="mb-3 px-5">
-                                <p>
-                                    Select your Available Days
-                                </p>
-                                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-
-                                    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off"
-                                        name="days" value="Monday">
-                                    <label class="btn btn-outline-primary" for="btncheck1">Monday</label>
-
-                                    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off"
-                                        name="days" value="Tuesday">
-                                    <label class="btn btn-outline-primary" for="btncheck2">Tuesday</label>
-
-                                    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off"
-                                        name="days" value="Wednesday">
-                                    <label class="btn btn-outline-primary" for="btncheck3">Wednesday</label>
-
-                                    <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off"
-                                        name="days" value="Thursday">
-                                    <label class="btn btn-outline-primary" for="btncheck4">Thursday</label>
-
-                                    <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off"
-                                        name="days" value="Friday">
-                                    <label class="btn btn-outline-primary" for="btncheck5">Friday</label>
-
-                                    <input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off"
-                                        name="days" value="Saturday">
-                                    <label class="btn btn-outline-primary" for="btncheck6">Saturday</label>
-
-                                    <input type="checkbox" class="btn-check" id="btncheck7" autocomplete="off"
-                                        name="days" value="Sunday">
-                                    <label class="btn btn-outline-primary" for="btncheck7">Sunday</label>
-
-                                </div>
-                            </div>
-
-                            <div class="mb-3 px-5">
-                                <p>Indicate your daily availability</p>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="availability" id="inlineRadio1"
-                                        value="Morning">
-                                    <label class="form-check-label" for="inlineRadio1">Morning</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="availability" id="inlineRadio2"
-                                        value="Afternoon">
-                                    <label class="form-check-label" for="inlineRadio2">Afternoon</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="availability" id="inlineRadio3"
-                                        value="Evening">
-                                    <label class="form-check-label" for="inlineRadio3">Evening</label>
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                    <div class="buttonContainer">
-                        <div class="centered">
-                            <a href="" class="gradientborder "><button type="submit">Submit</button></a>
-                        </div>
-
-                    </div>
-
-                </form>
-
-</body>
-
+      <div class="footer-section social-media">
+        <div class="footer-section logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <!-- Social Media -->
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+      </div>
+    </footer>
+  </body>
 </html>

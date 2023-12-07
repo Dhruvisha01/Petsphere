@@ -1,17 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index page</title>
+    <title>PetSphere</title>
+    <!-- Include Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/style.css" />
-</head>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="flex justify-between items-center p-4 bg-white shadow-md">
+      <a href="http://localhost:3000">
+        <div class="logo">
+          <img src="/images/logo.png" alt="" />
+        </div>
+      </a>
+      <nav class="flex gap-2">
+        <!-- Navigation Links -->
+        <a
+          href="http://localhost/petsphere2/index.php"
+          class="text-gray-600 hover:text-gray-900"
+          >Forum</a
+        >
+        <a href="/service" class="text-gray-600 hover:text-gray-900">Service</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900">Shop</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900">About</a>
+      </nav>
+    </header>
 
-<body>
-    <h1>This is index page!</h1>
-    <a href="/petSitters"> Pet sitters</a>
-    <a href="/petWalkers"> Pet Walkers</a>
-</body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>Welcome to PetSphere</h1>
+        <p>
+          Your one-stop community platform uniting pet enthusiasts for care,
+          connection, and community, all in one vibrant hub.
+        </p>
+      </div>
+      <div class="services-header">
+        <h1>Check out Our Services</h1>
+      </div>
+      <div class="service-container">
+        <div class="service">
+          <a href="/petWalkers">
+            <img
+              src="images/heros/walking.png"
+              alt="Pet Walking"
+              class="service-image"
+            />
+            <h2>Pet Walking</h2>
+            <p>
+              Our professional walkers offer stimulating and safe walks,
+              tailoring each outing to your dog's needs. Trust us to keep your
+              furry friend happy and healthy with every adventurous walk!
+            </p>
+          </a>
+        </div>
 
+        <div class="service">
+          <a href="/petSitters">
+            <img
+              src="images/heros/sitting.png"
+              alt="Pet Sitting"
+              class="service-image"
+            />
+            <h2>Pet Sitting</h2>
+            <p>
+              Our experienced sitters ensure your pet's comfort and routine,
+              offering personalized care like feeding, playtime, and cuddles.
+              Your pet will enjoy a cozy stay, feeling right at home while
+              you're away.
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="button-container">
+        <button class="find-service-btn">
+          <a href="/service">Find Service Near You</a>
+        </button>
+      </div>
+    </section>
+
+    <!-- Cards Section -->
+    <a href="./index.php">
+      <div class="section-headline">
+        <h1>Trending Posts</h1>
+      </div>
+      <div class="trending-section">
+        <div class="card-container">
+          <!-- Card 1 -->
+          <div class="card">
+            <img src="images/posts/cat2.jpg" alt="Pet" class="pet-image" />
+
+            <h3 class="card-title">Cat's Birthday Turkey Treat!</h3>
+            <div class="card-tags">
+              <span>cat</span>
+              <span>birthday</span>
+              <span>thanksgiving</span>
+            </div>
+            <div class="card-info">
+              <img
+                src="images/profiles/momo2.jpg"
+                alt="User"
+                class="user-avatar"
+              />
+              <span class="username">hawaiiice</span>
+              <span class="icon-comments">
+                <i class="far fa-comment" aria-hidden="true"></i>
+                230
+              </span>
+              <span class="icon-likes">
+                <i class="far fa-heart" aria-hidden="true"></i>2k
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card">
+            <img src="images/posts/cat.jpg" alt="Pet" class="pet-image" />
+
+            <h3 class="card-title">Homemade Tuna Treats</h3>
+            <div class="card-tags">
+              <span>cat</span>
+              <span>feline</span>
+              <span>treats</span>
+            </div>
+            <div class="card-info">
+              <img
+                src="images/profiles/momo1.jpg"
+                alt="User"
+                class="user-avatar"
+              />
+              <span class="username">benjamin</span>
+              <span class="icon-comments">
+                <i class="far fa-comment" aria-hidden="true"></i>
+                560
+              </span>
+              <span class="icon-likes">
+                <i class="far fa-heart" aria-hidden="true"></i>5.4k
+              </span>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="card">
+            <img src="images/posts/dog3.jpg" alt="Pet" class="pet-image" />
+            <h3 class="card-title">Homemade Healthy Dog Food</h3>
+            <div class="card-tags">
+              <span>dog</span>
+              <span>healthy</span>
+            </div>
+            <div class="card-info">
+              <img
+                src="images/profiles/momo.jpeg"
+                alt="User"
+                class="user-avatar"
+              />
+              <span class="username">kanghua</span>
+              <span class="icon-comments">
+                <i class="far fa-comment" aria-hidden="true"></i>
+                230
+              </span>
+              <span class="icon-likes">
+                <i class="far fa-heart" aria-hidden="true"></i>2.8k
+              </span>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="card">
+            <img src="images/posts/shiba0.jpg" alt="Pet" class="pet-image" />
+
+            <h3 class="card-title">Sushi Time for Shiba!</h3>
+            <div class="card-tags">
+              <span>healthy</span>
+              <span>dog</span>
+              <span>shiba</span>
+            </div>
+            <div class="card-info">
+              <img
+                src="images/profiles/momo2.jpg"
+                alt="User"
+                class="user-avatar"
+              />
+              <span class="username">KHQ</span>
+              <span class="icon-comments">
+                <i class="far fa-comment" aria-hidden="true"></i>
+                180
+              </span>
+              <span class="icon-likes">
+                <i class="far fa-heart" aria-hidden="true"></i>3.2k
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <div class="more-post">
+      <a href="http://localhost/petsphere2/index.php"
+        ><button class="more-post-btn">See more posts</button></a
+      >
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+      <div class="footer-section">
+        <h4>FORUM</h4>
+        <a href="http://localhost/petsphere2/login.php">Log in</a>
+        <a href="http://localhost/petsphere2/index.php">Pet Forum</a>
+      </div>
+      <div class="footer-section">
+        <h4>FIND SERVICE</h4>
+        <a href="#">Provide Service</a>
+        <a href="#">Find Provider</a>
+      </div>
+      <div class="footer-section">
+        <h4>SHOPPING</h4>
+        <a href="#">Food/Snacks</a>
+        <a href="#">Toys</a>
+      </div>
+      <div class="footer-section">
+        <h4>ABOUT US</h4>
+        <a href="#">FAQ</a>
+        <a href="#">Help/Support</a>
+      </div>
+
+      <div class="footer-section social-media">
+        <div class="footer-section logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <!-- Social Media -->
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+      </div>
+    </footer>
+  </body>
 </html>

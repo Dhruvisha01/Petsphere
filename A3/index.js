@@ -393,6 +393,10 @@ app.get("/datepicker", (req, res) => {
     res.render("datepicker")
 })
 
+app.get('/service',(req,res)=>{
+  res.render('service')
+})
+
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

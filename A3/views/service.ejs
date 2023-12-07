@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetSphere | Service</title>
+    <!-- Include Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="flex justify-between items-center p-4 bg-white shadow-md">
+      <a href="http://localhost:3000">
+        <div class="logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+      </a>
+      <nav class="flex gap-2">
+        <!-- Navigation Links -->
+        <a
+          href="http://localhost/petsphere2/index.php"
+          class="text-gray-600 hover:text-gray-900"
+          >Forum</a
+        >
+        <a
+          href="/service"
+          class="text-gray-600 hover:text-gray-900"
+          style="color: var(--MAIN70)"
+          >Service</a
+        >
+        <a href="#" class="text-gray-600 hover:text-gray-900">Shop</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900">About</a>
+      </nav>
+    </header>
+
+    <!-- Service Description -->
+    <section class="service-description">
+      <h1>Select the service you need</h1>
+      <div class="service-option">
+        <img
+          src="images/heros/walking2.png"
+          alt="Dog Walking"
+          class="service-description-image"
+        />
+        <div class="text-content">
+          <p>
+            Step into a world where your dog's happiness is our priority. Our
+            professional dog walking service is designed to keep your furry
+            friend fit, healthy, and above all, happy. We believe every walk is
+            an adventure, exploring local parks and neighborhoods, ensuring a
+            stimulating and enjoyable experience for your canine companion. Our
+            experienced walkers are trained to handle dogs of all sizes and
+            temperaments, providing a safe and engaging outing every time.
+            Whether it's a leisurely stroll or an energetic romp, we tailor each
+            walk to suit your dog's needs and preferences, guaranteeing wagging
+            tails after every adventure!
+          </p>
+          <button class="service-btn">
+            <a href="/petSitters">Find/Become a sitter</a>
+          </button>
+        </div>
+      </div>
+
+      <div class="service-option">
+        <img
+          src="images/heros/sitting2.png"
+          alt="Pet Sitting"
+          class="service-description-image small-screen-image"
+        />
+        <div class="text-content">
+          <p>
+            We understand that your pets are more than just animals – they're
+            part of your family. That's why our pet sitting services go beyond
+            the basics. Our dedicated and experienced sitters provide
+            personalized care, ensuring your pet's routine is maintained, even
+            when you're not there. From feeding and medication to playtime and
+            cuddles, we cater to each pet's unique needs. Our aim is to create a
+            comfortable and loving environment, so you can rest easy knowing
+            your furry family member is enjoying their own mini-vacation in the
+            safety and comfort of their home or ours.
+          </p>
+          <button class="service-btn secondary-color">
+            <a href="/petWalkers">Find/Become a walker</a>
+          </button>
+        </div>
+        <img
+          src="images/heros/sitting2.png"
+          alt="Pet Sitting"
+          class="service-description-image large-screen-image"
+        />
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+      <div class="footer-section">
+        <h4>FORUM</h4>
+        <a href="http://localhost/petsphere2/login.php">Log in</a>
+        <a href="http://localhost/petsphere2/index.php">Pet Forum</a>
+      </div>
+      <div class="footer-section">
+        <h4>FIND SERVICE</h4>
+        <a href="#">Provide Service</a>
+        <a href="#">Find Provider</a>
+      </div>
+      <div class="footer-section">
+        <h4>SHOPPING</h4>
+        <a href="#">Food/Snacks</a>
+        <a href="#">Toys</a>
+      </div>
+      <div class="footer-section">
+        <h4>ABOUT US</h4>
+        <a href="#">FAQ</a>
+        <a href="#">Help/Support</a>
+      </div>
+
+      <div class="footer-section social-media">
+        <div class="footer-section logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <!-- Social Media -->
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+      </div>
+    </footer>
+  </body>
+</html>
