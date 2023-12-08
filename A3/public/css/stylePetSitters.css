@@ -432,3 +432,54 @@ nav a {
     max-width: 100%;
   }
 }
+
+.cardService,
+.walkerCard {
+  /* Remove the shadow */
+  box-shadow: none;
+
+  /* Add a subtle border */
+  border: none;
+
+  /* Use a light background color */
+  background-color: #fefcfd; /* Very light gray */
+
+  /* Improve internal spacing */
+  padding: 1rem;
+
+  /* Rounded corners */
+  border-radius: 8px;
+
+  /* Transition for hover effect */
+  transition: transform 0.3s ease-in-out;
+}
+
+.cardService:hover,
+.walkerCard:hover {
+  /* Slight lift effect on hover */
+  transform: translateY(-5px);
+}
+
+.cardService .card-title,
+.walkerCard .card-title {
+  /* Typography improvements */
+  font-weight: 600;
+  color: #482d3d; /* Dark gray */
+  margin-bottom: 0.5rem;
+}
+
+.cardService .card-text,
+.walkerCard .card-text {
+  /* Lighter text color for descriptions */
+  color: #684a68; /* Medium gray */
+}
+
+/* Responsive design for cards */
+@media (max-width: 768px) {
+  .cardService,
+  .walkerCard {
+    /* Full width on smaller screens */
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

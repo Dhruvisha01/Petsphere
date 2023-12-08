@@ -336,3 +336,48 @@ h1 {
   margin-bottom: 1em;
   margin-top: 10px;
 }
+
+.pink {
+  color: var(--MAIN70);
+  border-color: var(--MAIN70);
+}
+
+.btn-check:checked {
+  color: white;
+  background-color: #b24b7f;
+  border-color: var(--MAIN70);
+}
+
+.pink:active {
+  color: white;
+  background-color: #b24b7f;
+  border-color: var(--MAIN70);
+}
+
+.btn-outline-primary {
+  color: #b24b7f;
+  border-color: #b24b7f;
+}
+
+.btn-outline-primary:hover {
+  color: white;
+  background-color: #b24b7f;
+  border-color: #b24b7f;
+}
+
+.nav-link.active,
+.nav-item.show .nav-link {
+  color: #b24b7f;
+}
+
+.some-other-class {
+  background-color: #b24b7f;
+  border-color: #b24b7f;
+}
+
+a {
+  color: #b24b7f;
+}
+a:hover {
+  color: darken(#b24b7f, 10%);
+}
