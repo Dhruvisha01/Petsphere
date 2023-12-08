@@ -395,3 +395,7 @@ h1 {
   margin-bottom: 1em;
   margin-top: 10px;
 }
+
+.form-check {
+  padding: 5px;
+}
